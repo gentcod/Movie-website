@@ -1,0 +1,50 @@
+body.active{
+    background-color: $color-white;
+}
+
+.content.active{
+    background-color: $color-white;
+    color: $color-black;
+}
+.content__featured--desc.active{
+    color: $color-white-2;
+}
+
+.content__movie-list__container-items--tag.active{
+    background-color: $color-white-2;
+    font-weight: 1000;
+}
+
+.content__movie-list__container-items--desc.active{
+    background-color: $color-white-2;
+    font-weight: 700;
+}
+
+.navbar.active{
+    background-color: $color-white;
+}
+
+.navbar-container.active{
+    color: $color-black;
+    font-weight: 700;
+}
+.navbar-container-profile-toggle.active{
+    background-color: $color-black;
+}
+
+.navbar-container-profile-toggle-ball.active{
+    background-color: $color-white;
+    transform: translateX(-2.6rem);
+}
+
+.sidebar.active{
+    background-color: $color-white;
+}
+
+.sidebar-nav.active{
+    color: $color-black;
+
+    &:hover{
+        color: $color-green;
+    }
+}

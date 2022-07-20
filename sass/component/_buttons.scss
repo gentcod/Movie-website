@@ -1,0 +1,31 @@
+.watch-button{
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    border: 0;
+    font-weight: 700;
+    background-color: $color-green;
+    color: $color-white;
+    margin-left: 2rem;
+    cursor: pointer;
+    transition: all .2s ease;
+
+    &:active {
+        transform: translateY(.5rem);
+    }
+
+    &:hover{
+        background-color: $color-black-3;
+        border: 2px solid $color-green;
+    }
+}
+
+.button-arrow{
+    font-size: 12rem;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    color: $color-white-2;
+    opacity: 0.5;
+    cursor: pointer;
+}
