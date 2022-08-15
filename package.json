@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "parcel",
-    "build": "parcel build index.html --dist-dir dist"
+    "build": "parcel build index.html --dist-dir dist",
+    "compile-sass": "node-sass ./sass/main.scss ./css/style.css -w"
   },
   "author": "Oyefule Oluwatatyo",
   "license": "ISC"

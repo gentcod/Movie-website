@@ -4,6 +4,12 @@
     background-color: $color-black;
     transition: 1s ease all;
 
+    @include respond(tab-port) {
+        position: fixed;
+        z-index: 10;
+        font-size: 1.2rem;
+    }
+
     &-container{
         display: flex;
         align-items: center;
@@ -15,10 +21,17 @@
         font-weight: 700;
         transition: 1s ease all;
 
+        @include respond(phone) {
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+
         &-logo{
             flex: 1;
             color: $color-green;
             text-align: center;
+
+           
         }
 
         &-menu{
@@ -74,13 +87,19 @@
                 justify-content: space-around;
                 position: relative;
                 transition: 1s ease all;
+
+                @include respond(phone) {
+                    width: 3.5rem;
+                    height: 2rem;
+                    justify-content: space-between;
+                }
                 
-            &-dark{
-                color: $color-yellow;
-            }
-            &-light{
-                color: $color-yellow;
-            }
+                &-dark{
+                    color: $color-yellow;
+                }
+                &-light{
+                    color: $color-yellow;
+                }
                 
                 &-ball{
                     width: 2rem;
@@ -91,6 +110,11 @@
                     right: 2px;
                     cursor: pointer;
                     transition: 1s ease all;
+
+                    @include respond(phone) {
+                        width: 1.5rem;
+                        height: 1.5rem;
+                    }
                 }
 
             }
@@ -105,6 +129,43 @@
     position: fixed;
     top: 0;
     transition: 1s ease all;
+
+    @include respond(tab-port) {
+        margin-top: 5rem;   
+    }
+
+    // @include respond(tab-port) {
+    //     height: 5rem;
+    // }
+
+    // &-icon {
+
+    //     &,
+    //     &::before,
+    //     &::after {
+    //         display: inline-block;
+    //         height: 2px;
+    //         width: 3rem;
+    //         background-color: $color-white;
+    //         position: relative;
+    //         margin-top: 2rem;
+    //     }
+
+    //     &::before,
+    //     &::after {
+    //         content: '';
+    //         position: absolute;
+    //         left: 1rem;
+    //     }
+
+    //     &::before {
+    //         top: -1rem;
+    //     }
+
+    //     &::after {
+    //         top: 1rem;
+    //     }
+    // }
 
     &-container{
         height: 100%;
@@ -140,6 +201,14 @@
         font-weight: 700;
         letter-spacing: 1;
         cursor: pointer;
+
+        @include respond(tab-port) {
+            margin-right: 2rem;   
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
 
         &:hover{
             color: $color-green;

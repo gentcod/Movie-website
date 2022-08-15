@@ -35,6 +35,10 @@ body.active{
 .navbar-container-profile-toggle-ball.active{
     background-color: $color-white;
     transform: translateX(-2.6rem);
+
+    @include respond(phone) {
+        transform: translateX(-1.8rem);
+    }
 }
 
 .sidebar.active{

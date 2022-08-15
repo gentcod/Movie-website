@@ -1,40 +1,46 @@
 const arrows = document.querySelectorAll(".button-arrow");
 const movieLists = document.querySelectorAll('.content__movie-list__container')
 const pageZoom = document.querySelector('html').style.fontSize;
-const img = document.querySelector('.content__movie-list__container-items__img').width;
+const imgWidth = document.querySelector('.content__movie-list__container-items__img').width;
+
+movieLists.forEach(movie => {
+    movie.style.transform = `translateX${'100px'}`
+})
 
 arrows.forEach((arrow, i)=>{
     const itemNum = movieLists[i].querySelectorAll('img').length;
+    const activeImage = movieLists[i].querySelector('img').dataset.image
+    // const imgNum = Math.floor(window.innerWidth/imgWidth);
     let clickCount = 0;
     arrow.addEventListener('click', ()=>{
-        const imgNum = Math.floor(window.innerWidth/img);
-        clickCount++; 
+        clickCount++;
 
-        if(imgNum == 7 && itemNum - (6 + clickCount) >= 0){
-            movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value - 300}px)`;
+        console.log(imgWidth)
+        console.log(itemNum)
+
+        if(itemNum - (6 + clickCount) >= 0){
+            movieLists[i].style.transform = `translateX(-${imgWidth}px)`;
         }
-        else if(imgNum == 6 && itemNum - (5 + clickCount) >= 0){
-            movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value - 220}px)`;
+        else if(itemNum - (5 + clickCount) >= 0){
+            movieLists[i].style.transform = `translateX(-${imgWidth}px)`;
         }
-        else if(imgNum == 5 && itemNum - (4 + clickCount) >= 0){
-            movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value - 220}px)`;
+        else if(itemNum - (4 + clickCount) >= 0){
+            movieLists[i].style.transform = `translateX(-${imgWidth}px)`;
         }
-        else if(imgNum == 4 && itemNum - (4 + clickCount) >= 0){
-            movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value - 300}px)`;
+        else if(itemNum - (4 + clickCount) >= 0){
+            movieLists[i].style.transform = `translateX(-${imgWidth}px)`;
         }
-        else if(imgNum == 3 && itemNum - (4 + clickCount) >= 0){
-            movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value - 50}px)`;
+        else if(itemNum - (4 + clickCount) >= 0){
+            movieLists[i].style.transform = `translateX(-${imgWidth}px)`;
         }
-        else if(imgNum == 2 && itemNum - (4 + clickCount) >= 0){
-            movieLists[i].style.transform = `translateX(${movieLists[i].computedStyleMap().get("transform")[0].x.value - 50}px)`;
+        else if(itemNum - (4 + clickCount) >= 0){
+            movieLists[i].style.transform = `translateX(-${imgWidth}px)`;
         }
         else{
             movieLists[i].style.transform = 'translateX(0)'
             clickCount = 0;
         }
-        console.log(imgNum)
     })
-    console.log(itemNum)
 })
 
 const ball = document.querySelector('.navbar-container-profile-toggle-ball');
